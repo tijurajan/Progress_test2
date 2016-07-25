@@ -1,0 +1,40 @@
+----------------------------------------
+Timestamp: 7/25/2016 1:19:23 AM
+
+Message: System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.InvalidOperationException: A from address must be specified.
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Telerik.Sitefinity.Web.Mail.StandardDotNetEmailSender.SendInternal(MailMessage message)
+   at Telerik.Sitefinity.Web.Mail.StandardDotNetEmailSender.Send(MailMessage message)
+   at Telerik.Sitefinity.Web.Mail.EmailSender.Send(MailMessage message)
+   at SitefinityWebApp.Forms.customForm.FormsEventHandler(IFormEntryCreatedEvent eventInfo) in C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\Forms\customForm.cs:line 68
+   at SitefinityWebApp.Forms.customForm.<InitializeControls>b__0_0(IFormEntryCreatedEvent evt) in C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\Forms\customForm.cs:line 30
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Delegate.DynamicInvokeImpl(Object[] args)
+   at Telerik.Sitefinity.Services.Events.EventService.HandlerList.Invoke(IEvent event, Boolean throwExceptions)
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 1
+
+Severity: Information
+
+Title:
+
+Machine: TIJUGUDDY
+
+App Domain: /LM/W3SVC/2/ROOT-1-131138829444543363
+
+ProcessId: 6196
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:10308
+
+Extended Properties: 
+----------------------------------------

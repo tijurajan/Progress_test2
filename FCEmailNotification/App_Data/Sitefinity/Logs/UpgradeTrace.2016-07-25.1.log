@@ -1,0 +1,328 @@
+----------------------------------------
+Timestamp: 7/24/2016 12:47:13 AM
+
+Message: Db Migration Complexity: Complex
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 12:47:13 AM
+
+Message: Adding a column(s) on an existing table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 12:47:13 AM
+
+Message: Removing a column(s) from an existing table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 12:47:13 AM
+
+Message: -- add column for field sf_registernewuser.emailField
+ALTER TABLE [sf_registernewuser] ADD [email_field] NVARCHAR(255) NULL
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 12:47:13 AM
+
+Message: -- dropping unknown column [form_text_box_email]
+ALTER TABLE [sf_registernewuser] DROP COLUMN [form_text_box_email]
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:30:41 AM
+
+Message: Db Migration Complexity: Trivial
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:30:41 AM
+
+Message: Adding a foreign key constraint(s) to a new table(s), the create table statement(s) is included as well.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:30:41 AM
+
+Message: Adding a new table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:30:41 AM
+
+Message: -- Telerik.Sitefinity.DynamicTypes.Model.sf_sample
+CREATE TABLE [sf_sample] (
+    [id] uniqueidentifier NOT NULL,
+    [text_field_controller] NVARCHAR(255) NULL, -- sf_sample.TextFieldController
+    CONSTRAINT [pk_sf_sample] PRIMARY KEY ([id])
+)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:30:41 AM
+
+Message: ALTER TABLE [sf_sample] ADD CONSTRAINT [ref_sf_sample_sf_form_entry] FOREIGN KEY ([id]) REFERENCES [sf_form_entry]([id]) ON DELETE CASCADE
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: Db Migration Complexity: Extending
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: Adding a column(s) on an existing table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: Adding a foreign key constraint(s) to a new table(s), the create table statement(s) is included as well.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: Adding an index(indices) definition for a new table(s), the create table statement(s) is included as well.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: Adding a new table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: -- Telerik.Sitefinity.DynamicTypes.Model.sf_ec_prdct_book
+CREATE TABLE [sf_ec_prdct_book] (
+    [id] uniqueidentifier NOT NULL,
+    [release_date] DATETIME NULL,           -- sf_ec_prdct_book.ReleaseDate
+    [Publisher] NVARCHAR(255) NULL,         -- sf_ec_prdct_book.Publisher
+    [number_of_pages] INT NULL,             -- sf_ec_prdct_book.NumberOfPages
+    [i_s_b_n] NVARCHAR(255) NULL,           -- sf_ec_prdct_book.ISBN
+    [author] NVARCHAR(255) NULL,            -- sf_ec_prdct_book.Author
+    CONSTRAINT [pk_sf_ec_prdct_book] PRIMARY KEY ([id])
+)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: -- Telerik.Sitefinity.DynamicTypes.Model.sf_ec_prdct_generalproduct
+CREATE TABLE [sf_ec_prdct_generalproduct] (
+    [id] uniqueidentifier NOT NULL,
+    CONSTRAINT [pk_sf_ec_prdct_generalproduct] PRIMARY KEY ([id])
+)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: -- Telerik.Sitefinity.DynamicTypes.Model.sf_ec_prdct_software
+CREATE TABLE [sf_ec_prdct_software] (
+    [id] uniqueidentifier NOT NULL,
+    [release] NVARCHAR(255) NULL,           -- sf_ec_prdct_software.Release
+    [platform] NVARCHAR(255) NULL,          -- sf_ec_prdct_software.Platform
+    CONSTRAINT [pk_sf_ec_prdct_software] PRIMARY KEY ([id])
+)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: -- Telerik.Sitefinity.DynamicTypes.Model.sf_ec_prdct_song
+CREATE TABLE [sf_ec_prdct_song] (
+    [id] uniqueidentifier NOT NULL,
+    [release_year] INT NULL,                -- sf_ec_prdct_song.ReleaseYear
+    [length] NVARCHAR(255) NULL,            -- sf_ec_prdct_song.Length
+    [artist] NVARCHAR(255) NULL,            -- sf_ec_prdct_song.Artist
+    [album] NVARCHAR(255) NULL,             -- sf_ec_prdct_song.Album
+    CONSTRAINT [pk_sf_ec_prdct_song] PRIMARY KEY ([id])
+)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: -- add column for field <internal-class-id>
+ALTER TABLE [sf_ec_product] ADD [voa_class] int NULL
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: UPDATE [sf_ec_product] SET [voa_class] = 0
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: ALTER TABLE [sf_ec_product] ALTER COLUMN [voa_class] int NOT NULL
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: -- Telerik.OpenAccess.TrackedList`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]] Telerik.Sitefinity.Ecommerce.Catalog.Model.Product.Department
+CREATE TABLE [sf_ec_product_department] (
+    [id] uniqueidentifier NOT NULL,
+    [seq] int NOT NULL,                     -- <sequence>
+    [val] uniqueidentifier NULL,            -- <value>
+    CONSTRAINT [pk_sf_ec_product_department] PRIMARY KEY ([id], [seq])
+)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: -- Telerik.OpenAccess.TrackedList`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]] Telerik.Sitefinity.Ecommerce.Catalog.Model.Product.Tags
+CREATE TABLE [sf_ec_product_tags] (
+    [id] uniqueidentifier NOT NULL,
+    [seq] int NOT NULL,                     -- <sequence>
+    [val] uniqueidentifier NULL,            -- <value>
+    CONSTRAINT [pk_sf_ec_product_tags] PRIMARY KEY ([id], [seq])
+)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: ALTER TABLE [sf_ec_prdct_book] ADD CONSTRAINT [ref_sf_c_prdct_bk_sf__4ADEB946] FOREIGN KEY ([id]) REFERENCES [sf_ec_product]([id]) ON DELETE CASCADE
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: ALTER TABLE [sf_ec_prdct_generalproduct] ADD CONSTRAINT [ref_sf_c_prdct_gnrlpr_1BF9D988] FOREIGN KEY ([id]) REFERENCES [sf_ec_product]([id]) ON DELETE CASCADE
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: ALTER TABLE [sf_ec_prdct_software] ADD CONSTRAINT [ref_sf_c_prdct_sftwr__02DBF4EF] FOREIGN KEY ([id]) REFERENCES [sf_ec_product]([id]) ON DELETE CASCADE
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: ALTER TABLE [sf_ec_prdct_song] ADD CONSTRAINT [ref_sf_c_prdct_sng_sf_60B26BCA] FOREIGN KEY ([id]) REFERENCES [sf_ec_product]([id]) ON DELETE CASCADE
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: ALTER TABLE [sf_ec_product_department] ADD CONSTRAINT [ref_sf_c_prdct_dprtmn_B6654094] FOREIGN KEY ([id]) REFERENCES [sf_ec_product]([id])
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: ALTER TABLE [sf_ec_product_tags] ADD CONSTRAINT [ref_sf_c_prdct_tgs_sf_7D33BDB8] FOREIGN KEY ([id]) REFERENCES [sf_ec_product]([id])
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: -- Index 'idx_sf_c_prduct_department_val' was not detected in the database. It will be created
+CREATE INDEX [idx_sf_c_prduct_department_val] ON [sf_ec_product_department]([val])
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:45:46 AM
+
+Message: -- Index 'idx_sf_ec_product_tags_val' was not detected in the database. It will be created
+CREATE INDEX [idx_sf_ec_product_tags_val] ON [sf_ec_product_tags]([val])
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:46:06 AM
+
+Message: Db Migration Complexity: Complex
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:46:06 AM
+
+Message: -- dropping table [sf_sample]
+DROP TABLE [sf_sample]
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:46:56 AM
+
+Message: Db Migration Complexity: Trivial
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:46:56 AM
+
+Message: Adding a foreign key constraint(s) to a new table(s), the create table statement(s) is included as well.
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:46:56 AM
+
+Message: Adding a new table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:46:56 AM
+
+Message: -- Telerik.Sitefinity.DynamicTypes.Model.sf_sample
+CREATE TABLE [sf_sample] (
+    [id] uniqueidentifier NOT NULL,
+    [email_field] NVARCHAR(255) NULL,       -- sf_sample.emailField
+    CONSTRAINT [pk_sf_sample] PRIMARY KEY ([id])
+)
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/24/2016 3:46:56 AM
+
+Message: ALTER TABLE [sf_sample] ADD CONSTRAINT [ref_sf_sample_sf_form_entry] FOREIGN KEY ([id]) REFERENCES [sf_form_entry]([id]) ON DELETE CASCADE
+
+
+----------------------------------------

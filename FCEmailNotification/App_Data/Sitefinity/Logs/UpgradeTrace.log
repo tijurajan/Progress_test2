@@ -1,0 +1,54 @@
+----------------------------------------
+Timestamp: 7/25/2016 3:40:35 AM
+
+Message: Db Migration Complexity: Extending
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/25/2016 3:40:35 AM
+
+Message: Adding a column(s) on an existing table(s).
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/25/2016 3:40:36 AM
+
+Message: -- add column for field sf_sample.userTypeMultipleChoice
+ALTER TABLE [sf_sample] ADD [user_type_multiple_choice] NVARCHAR(255) NULL
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/25/2016 3:40:36 AM
+
+Message: -- add column for field sf_sample.organizationTextBox
+ALTER TABLE [sf_sample] ADD [organization_text_box] NVARCHAR(255) NULL
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/25/2016 3:40:36 AM
+
+Message: -- add column for field sf_sample.mNameTextBox
+ALTER TABLE [sf_sample] ADD [m_name_text_box] NVARCHAR(255) NULL
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/25/2016 3:40:36 AM
+
+Message: -- add column for field sf_sample.lNameTextBox
+ALTER TABLE [sf_sample] ADD [l_name_text_box] NVARCHAR(255) NULL
+
+
+----------------------------------------
+----------------------------------------
+Timestamp: 7/25/2016 3:40:36 AM
+
+Message: -- add column for field sf_sample.fName_TextBox
+ALTER TABLE [sf_sample] ADD [f_name__text_box] NVARCHAR(255) NULL
+
+
+----------------------------------------

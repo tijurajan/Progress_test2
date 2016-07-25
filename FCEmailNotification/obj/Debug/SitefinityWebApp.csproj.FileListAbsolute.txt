@@ -1,0 +1,12 @@
+C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\bin\SitefinityWebApp.ResourcePackages.Bootstrap.dll
+C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\bin\SitefinityWebApp.ResourcePackages.Bootstrap.pdb
+C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\bin\SitefinityWebApp.dll.config
+C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\bin\SitefinityWebApp.dll
+C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\bin\SitefinityWebApp.pdb
+C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\bin\Microsoft.Web.Administration.dll
+C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\bin\EnvDTE.dll
+C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\bin\stdole.dll
+C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\bin\EnvDTE.xml
+C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\obj\Debug\SitefinityWebApp.csprojResolveAssemblyReference.cache
+C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\obj\Debug\SitefinityWebApp.dll
+C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\obj\Debug\SitefinityWebApp.pdb

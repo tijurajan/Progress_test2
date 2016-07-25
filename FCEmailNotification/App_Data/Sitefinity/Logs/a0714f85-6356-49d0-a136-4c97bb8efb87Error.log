@@ -1,0 +1,39 @@
+----------------------------------------
+Timestamp: 7/25/2016 2:11:53 AM
+
+Message: System.Net.Mail.SmtpException: Failure sending mail. ---> System.IO.IOException: Unable to read data from the transport connection: net_io_connectionclosed.
+   at System.Net.Mail.SmtpReplyReaderFactory.ProcessRead(Byte[] buffer, Int32 offset, Int32 read, Boolean readLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLines(SmtpReplyReader caller, Boolean oneLine)
+   at System.Net.Mail.SmtpReplyReaderFactory.ReadLine(SmtpReplyReader caller)
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- End of inner exception stack trace ---
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at SitefinityWebApp.Forms.customForm.FormsEventHandler(IFormEntryCreatedEvent eventInfo) in C:\Users\Tiju\Documents\GitHub\Progress_test2\FCEmailNotification\Forms\customForm.cs:line 85
+
+Category: ErrorLog
+
+Priority: -1
+
+EventId: 0
+
+Severity: Information
+
+Title:Email on form submission failed
+
+Machine: TIJUGUDDY
+
+App Domain: /LM/W3SVC/2/ROOT-1-131138861405107876
+
+ProcessId: 5264
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:8624
+
+Extended Properties: 
+----------------------------------------
